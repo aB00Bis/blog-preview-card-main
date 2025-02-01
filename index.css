@@ -1,3 +1,8 @@
+:root {
+	--yellow: #f4d04e;
+	--gray: #6b6b6b;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,7 +10,7 @@
 }
 
 body {
-	background-color: #f4d04e;
+	background-color: var(--yellow);
 	font-size: 16px;
 	font-family: 'Figtree', sans-serif;
 }
@@ -40,31 +45,40 @@ body {
 }
 
 .content-category {
-	width: max-content; /* или width: max-content; */
-	background-color: #f4d04e;
+	width: max-content;
+	background-color: var(--yellow);
 	font-size: 14px;
 	font-weight: 700;
 	padding: 6px 12px;
-	border-radius: 4px; /* Можно добавить для скругления */
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 .content-publish-date {
 	font-size: 14px;
 	font-weight: 500;
+	cursor: default;
 }
 
 .content-title {
 	font-size: 24px;
 	font-weight: 700;
+	cursor: default;
+}
+
+.content-title:hover {
+	color: var(--yellow);
 }
 
 .content-description {
-	color: #6b6b6b;
+	color: var(--gray);
+	cursor: default;
 }
 
 .author {
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 
 .author-avatar img {
